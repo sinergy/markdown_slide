@@ -41,11 +41,27 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>什麼是 Markdown ?</h2>
     </hgroup>
     <article>
-      <ul>
-        <li>Markup Language (標記語言) 的一種</li>
-        <li>一種寫作的方法</li>
-        <li>純文字的 rich text word processor</li>
-        <li></li>
+      <ul class="build fade">
+        <li><a href="http://en.wikipedia.org/wiki/Markup_language">Markup Language</a> (標記語言) 的一種</li>
+        <li>A plain text formatting syntax</li>
+        <li>一個採用 Perl 撰寫的軟體工具，協助將純文字語法轉換成 HTML</li>
+        <li>旨在實現「易讀易寫」(easy-to-read, easy-to-write)</li>
+        <li>最需要強調的為其「<strong>可讀性</strong>」</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Why Markdown ?</h2>
+    </hgroup>
+    <article>
+      <ul class="build fade">
+        <li>Platform independent</li>
+        <li>Human readable and intuitive</li>
+        <li>Easy to learn</li>
+        <li>Plain text is durable</li>
+        <li><a href="https://www.quora.com/What-are-the-benefits-to-using-Markdown">More</a>...</li>
       </ul>
     </article>
   </slide>
@@ -90,28 +106,74 @@ URL: https://code.google.com/p/io-2012-slides
     Hidden slides are left out of the presentation.
   </slide>
 
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/avatar_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Markdown Syntax</h2>
+      <h3>Let's rock and roll</h3>
+    </hgroup>
+  </slide>
+
   <slide>
     <hgroup>
-      <h2>Code Slide (with Subtitle Placeholder)</h2>
-      <h3>Subtitle Placeholder</h3>
+      <h2>標題 Headers</h2>
     </hgroup>
     <article>
-      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+      <p>Markdown 支援兩種標題的語法，<a href="http://en.wikipedia.org/wiki/Setext">Setext</a> 和 <a href="http://www.aaronsw.com/2002/atx/intro">atx</a> 形式</p> 
       <pre data-lang="markdown">
-Hello *Stark!*
+// Setext-style
+This is a h1 element
+====================
 
-Welcome to **Starktech**!
+This is a h2 element
+--------------------
 </pre>
-<pre class="prettyprint" data-lang="html">
-&lt;p&gt;Hello &lt;strong&gt;Stark!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Welcome to &lt;i&gt;Starktech!&lt;/i&gt;&lt;/p&gt;
+<pre data-lang="markdown">
+// atx-style
+#This is a h1
+##This is a h2
+###This is a h3
 </pre>
-    <p>
-      <ul>
-        <li>Hello Stark!</li>
-        <li>Welcome to <i>Starktech!</i></li>
-      </ul>
-    </p>
+    <p>What does headers <a href="http://codepen.io/cloudchen/pen/BpnDf">look</a> like?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>段落 Paragraphs</h2>
+    </hgroup>
+    <article>
+      <p>Markdown 的段落就如同我們一般寫作分段一樣，段落與端落之間空一行即可</p> 
+      <pre data-lang="markdown">
+A Second Level Header
+---------------------
+
+Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.
+
+The quick brown fox jumped over the lazy
+dog's back.
+</pre>
+    <p>What does paragraphs <a href="http://codepen.io/cloudchen/pen/DphqI">look</a> like?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>引言 Quotes</h2>
+    </hgroup>
+    <article>
+      <p>Markdown 支援巢狀 (nested) 的引言使用</p> 
+      <pre class="prettyprint" data-lang="markdown">
+<b>></b> Life is an open book exam. - Tina Seelig
+
+<b>></b> おれは "海賊王" になる男だ!!!! - モンキー・D・ルフィ
+<b>>></b> 人の夢は!!! 終わらねェ!!!! - 黒ひげ
+
+<b>></b> 建立自我、追求忘我 - 馬雲
+</pre>
+    <p>What does quotes <a href="http://codepen.io/cloudchen/pen/CAprv">look</a> like?</p>
     </article>
   </slide>
 
@@ -326,14 +388,6 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/avatar_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>Learning Resource</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-  </slide>
-
   <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
     <hgroup>
       <h2 class="white">Full Image (with Optional Header)</h2>
@@ -342,14 +396,14 @@ function helloWorld(world) {
   </slide>
 
   <slide class="segue dark quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <aside class="gdbar right bottom"><img src="images/avatar_tina_seelig_128.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <q>
-        This is an example of quote text.
+        Never miss an opportunity to be fabulous.
       </q>
       <div class="author">
-        Name<br>
-        Company
+        Tina Seelig<br>
+        Professor of the Practice, Stanford
       </div>
     </article>
   </slide>
@@ -363,9 +417,23 @@ function helloWorld(world) {
     </article>
   </slide>
 
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/avatar_128.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Demo</h2>
+      <h3>作而言不如起而行，Get your hands dirty!</h3>
+    </hgroup>
+  </slide>
+
   <slide>
     <article>
-      <iframe data-src="http://www.google.com/doodle4google/resources/history.html"></iframe>
+      <iframe data-src="http://daringfireball.net/projects/markdown/dingus"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <iframe data-src="http://markable.in"></iframe>
     </article>
   </slide>
 

@@ -8,6 +8,7 @@ var SLIDE_CONFIG = {
       title: 'Inside Talk',
       date: '9/6/2013'
     },
+    hashtag: '#markdown',
     useBuilds: true, // Default: true. False will turn off slide animation builds.
     usePrettify: true, // Default: true
     enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
