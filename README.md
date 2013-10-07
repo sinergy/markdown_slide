@@ -46,7 +46,10 @@ pre {
 }
 </style>
 
-<h1><img src="images/io2012_logo.png"> HTML5 Slide Template</h1>
+avatar-io-2012-slide
+====================
+
+a template of HTML5 slide modified from io-2012-slide provided by Google.
 
 ## Configuring the slides
 
@@ -126,5 +129,3 @@ To disable presenter mode, hit [http://localhost:8000/template.html?presentme=fa
 Presenter mode is sticky, so refreshing the page will persist your settings.
 
 ---
-
-That's all she wrote!
