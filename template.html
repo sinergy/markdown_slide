@@ -68,42 +68,11 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Slide with Bullets that Build</h2>
-      <h3>Subtitle Placeholder</h3>
+      <h2>Readability Matters!!</h2>
     </hgroup>
     <article>
-      <p>A list where items build:</p>
-      <ul class="build">
-        <li>Pressing 'h' highlights code snippets</li>
-        <li>Pressing 'p' toggles speaker notes (if they're on the current slide)</li>
-        <li>Pressing 'f' toggles fullscreen viewing</li>
-        <li>Pressing 'w' toggles widescreen</li>
-        <li>Pressing 'o' toggles overview mode</li>
-        <li>Pressing 'ESC' toggles off these goodies</li>
-      </ul>
-      <p>Another list, but items fade as they build:</p>
-      <ul class="build fade">
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-      </ul>
+      <img src="images/readability.png" class="reflect" alt="Readability" title="Readibility does matters!">
     </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <ul>
-        <li>All <a href="http://google.com">links</a> open in new tabs.</li>
-        <li>To change that this, add <code>target="_self"</code> to the link.</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide hidden>
-    Hidden slides are left out of the presentation.
   </slide>
 
   <slide class="segue dark nobackground">
@@ -155,6 +124,7 @@ regular paragraph.
 The quick brown fox jumped over the lazy
 dog's back.
 </pre>
+    <p>若要實現段落內換行，也就是 HTML 中的 <code>&lt;br&gt;</code> 標籤，則必須在上一行的行尾加上兩個以上的空白</p>
     <p>What does paragraphs <a href="http://codepen.io/cloudchen/pen/DphqI">look</a> like?</p>
     </article>
   </slide>
@@ -179,35 +149,129 @@ dog's back.
 
   <slide>
     <hgroup>
-      <h2>Code Slide (Smaller Font)</h2>
+      <h2>清單 Lists</h2>
     </hgroup>
     <article class="smaller">
-      <pre class="prettyprint" data-lang="javascript">
-// Say hello world until the user starts questioning
-// the meaningfulness of their existence.
-function helloWorld(world) {
-  for (var i = 42; --i &gt;= 0;) {
-    alert('Hello ' + String(world));
-  }
-}
+      <p>有序清單，所使用數字並不影響輸出結果</p>
+      <pre data-lang="markdown">
+1. 刷牙洗臉
+2. 喝一杯 500cc 的白開水
+3. 享受美好的早餐
+6. Suit up!
+5. What's up!
 </pre>
-<pre class="prettyprint" data-lang="css">
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-&lt;/style&gt;
+    <p>無序清單，使用<code>星號</code>、<code>加號</code>、<code>減號</code></p>
+          <pre data-lang="markdown">
+* 刷牙洗臉
+* 喝一杯500c.c.白開水
+
+- Android
+- iOS
+- Unity
+- Web
+
++ 詠春 - 葉問
++ 截拳道 - 李小龍
 </pre>
-<pre class="prettyprint" data-lang="html">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-  &lt;title>My Awesome Page&lt;/title>
-&lt;/head>
-&lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
-&lt;body>
-&lt;/html>
+    <p>What does lists <a href="http://codepen.io/cloudchen/pen/cbhxm">look</a> like?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>強調 Emphasise</h2>
+    </hgroup>
+    <article>
+      <p>使用星號 (<code>*</code>) 與底線 (<code>_</code>)</p> 
+      <pre class="prettyprint" data-lang="markdown">
+Jimmy: 所以中午要吃什麼？
+William: <b>_愛煩司_</b>  //標準不選字類型！
+Eddie: 那是<b>*明天*</b>的事。
+Arc: 有<b>**-**</b>是長音
+William: <b>__KIKI__</b>說他想吃<b>**波士頓派**</b>
 </pre>
+    <p>What does emphasise <a href="http://codepen.io/cloudchen/pen/rcoFK">look</a> like?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>分隔線 Horizontal Rules</h2>
+    </hgroup>
+    <article>
+      <p>使用<code>三個以上</code>的星號 (<code>*</code>) 與減號 (<code>-</code>)</p> 
+      <pre data-lang="markdown">
+* * *
+
+***
+
+*****
+
+- - -
+
+------------------
+</pre>
+    <p>What does horizontal rules <a href="http://codepen.io/cloudchen/pen/Izfyd">look</a> like?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>程式碼區塊 Code</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="markdown">
+<b>```</b>
+$( "#content" )
+    .find( "h3" )
+    .eq( 2 )
+        .html( "new text for the third h3!" )
+        .end() // Restores the selection to all h3s in #content
+    .eq( 0 )
+        .html( "new text for the first h3!" );
+<b>```</b>
+</pre>
+    <p>What does code <a href="http://codepen.io/cloudchen/pen/aczBp">look</a> like?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>程式碼 Inline Code</h2>
+    </hgroup>
+    <article>
+      <p>使用反引號 (<code>`</code>) 包起來</p> 
+      <pre class="prettyprint" data-lang="markdown">
+- <b>`</b>cmd<b>`</b> + <b>`</b>T<b>`</b>: 開啟新分頁
+- <b>`</b>cmd<b>`</b> + <b>`</b>W<b>`</b>: 關閉當前分頁
+
+良好的網址對於SEO非常重要，一般在 Rails 裡面使用<b>`</b>[:id]<b>`</b>的方法，我們可以
+使用 friendly_id 這套 Gem 來幫助我們，你可以把像是 <b>`</b>http://example.com/products/123<b>`</b>
+變成<b>`</b>http://example.com/products/好素肚不買嗎?user=jack&qty=69<b>`</b>這樣的網址
+</pre>
+    <p>What does inline code <a href="http://markable.in/file/6511bce6-2f72-11e3-b2d9-984be164924a/">look</a> like?</p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>連結 Links</h2>
+    </hgroup>
+    <article>
+      <p>Markdown 支援兩種連結語法：<code>行內</code> 和 <code>參考</code></p> 
+      <pre data-lang="markdown">
+這是一個行內形式連結的語法[範例](http://cloudchen.com/)
+Markdown 對於[站內連結](/images/barchart.png)也有一套！
+
+這是一些參考形式連的語法範例：
+知名搜引擎如：[Goolge][]、[Yahoo!][y]、[Bing][] 都相繼採用了 RWD 來設計網頁
+
+[Google]: http://www.google.com "Google"
+[y]: http://yahoo.com      (Yahoo Search)
+[Bing]:   http://www.bing.com   'Microsoft Search'
+//參照形式的連結可以放置在文件中的任何位置
+</pre>
+    <p>What does links <a href="http://codepen.io/cloudchen/pen/iLwKs">look</a> like?</p>
     </article>
   </slide>
 
@@ -215,49 +279,27 @@ function helloWorld(world) {
     <aside class="note">
       <section>
         <ul>
-          <li>Point I wanted to make #1</li>
-          <li>Point I wanted to make #2</li>
-          <li>Point I wanted to make #3</li>
+          <li>目前圖片的語法尚不支援指定圖片大小，請改用&lt;img&gt;</li>
           <li>Example <a href="#">link</a> in notes.</li>
         </ul>
         <p><b>Remember to say this tag line!</b></p>
       </section>
     </aside>
     <hgroup>
-      <h2>Slide with Speaker Notes</h2>
+      <h2>圖片 Images</h2>
     </hgroup>
     <article>
-      <p>Press 'p' to toggle speaker notes.</p>
-    </article>
-  </slide>
+    <p>圖片的語法也有：<code>行內</code> 和 <code>參考</code> 兩種，類似連結的語法，不過在前面多加了<code>驚嘆號(!)</code></p>  
+      <pre data-lang="markdown">
+Jimmy：最近我會收到一個包裹
 
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Presenter Mode</h2>
-    </hgroup>
-    <article>
-      <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
-      This setting is sticky, meaning refreshing the page will persist presenter
-      mode.</p>
-      <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
-    </article>
-  </slide>
+![A Package](http://goo.gl/wF37AH "傳說中的包裹")
 
-  <slide>
-    <hgroup>
-      <h2>Slide with Image</h2>
-    </hgroup>
-    <article>
-      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
+![alt text here][img]
+
+[img]: http://goo.gl/yb8Qjw "包裹！"
+</pre>
+    <p>What does images <a href="http://codepen.io/cloudchen/pen/mJEyu">look</a> like?</p>
     </article>
   </slide>
 
@@ -268,90 +310,6 @@ function helloWorld(world) {
     <article class="flexbox vcenter">
       <img src="images/barchart.png" alt="Description" title="Description">
       <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table>
-        <tr>
-          <th>格式</th><th>常見用途</th>
-        </tr>
-        <tr>
-          <td>XML (eXtensible Markup Language)</td><td class="highlight">展現格式、五六七八、五花八門</td>
-        </tr>
-        <tr>
-          <td>HTML (HyperText Markup Language)</td><td>網頁</td>
-        </tr>
-        <tr>
-          <td>Textile</td><td>Wikipedia</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A (Smaller Text)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article class="smaller">
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option B</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table class="rows">
-        <tr>
-          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
     </article>
   </slide>
 
@@ -388,13 +346,6 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
-    <hgroup>
-      <h2 class="white">Full Image (with Optional Header)</h2>
-    </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
-  </slide>
-
   <slide class="segue dark quote nobackground">
     <aside class="gdbar right bottom"><img src="images/avatar_tina_seelig_128.png"></aside>
     <article class="flexbox vleft auto-fadein">
@@ -408,32 +359,29 @@ function helloWorld(world) {
     </article>
   </slide>
 
-  <slide>
-    <hgroup>
-      <h2>Slide with Iframe</h2>
-    </hgroup>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/resources/history.html"></iframe>
-    </article>
-  </slide>
-
   <slide class="segue dark nobackground">
     <aside class="gdbar"><img src="images/avatar_128.png"></aside>
     <hgroup class="auto-fadein">
-      <h2>Demo</h2>
-      <h3>作而言不如起而行，Get your hands dirty!</h3>
+      <h2>Tools</h2>
+      <h3>工欲善其事，必先利其器，Get your hands dirty!</h3>
     </hgroup>
   </slide>
 
   <slide>
     <article>
-      <iframe data-src="http://daringfireball.net/projects/markdown/dingus"></iframe>
+      <iframe data-src="http://markdown-here.com/"></iframe>
     </article>
   </slide>
 
   <slide>
     <article>
       <iframe data-src="http://markable.in"></iframe>
+    </article>
+  </slide>
+
+  <slide>
+    <article>
+      <iframe data-src="http://mouapp.com"></iframe>
     </article>
   </slide>
 
@@ -446,12 +394,6 @@ function helloWorld(world) {
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
     </p>
-  </slide>
-
-  <slide class="logoslide dark nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/google_developers_logo_white.png"></span>
-    </article>
   </slide>
 
   <slide class="backdrop"></slide>
