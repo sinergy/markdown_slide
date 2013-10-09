@@ -6,7 +6,7 @@ var SLIDE_CONFIG = {
     subtitle: '輕量級的網頁標記語言',
     eventInfo: {
       title: 'Inside Talk',
-      date: '9/6/2013'
+      date: '9/10/2013'
     },
     hashtag: '#markdown',
     useBuilds: true, // Default: true. False will turn off slide animation builds.

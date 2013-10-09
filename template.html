@@ -66,6 +66,12 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
 
+  <slide class="fill nobackground" style="background-image: url(images/markdown_lovers.png)">
+    <hgroup>
+      <h2 class="white">Markdown Supported!</h2>
+    </hgroup>
+  </slide>
+
   <slide>
     <hgroup>
       <h2>Readability Matters!!</h2>
@@ -219,19 +225,29 @@ William: <b>__KIKI__</b>說他想吃<b>**波士頓派**</b>
     <hgroup>
       <h2>程式碼區塊 Code</h2>
     </hgroup>
-    <article>
+    <article class="smaller">
       <pre class="prettyprint" data-lang="markdown">
 <b>```</b>
-$( "#content" )
-    .find( "h3" )
-    .eq( 2 )
-        .html( "new text for the third h3!" )
-        .end() // Restores the selection to all h3s in #content
-    .eq( 0 )
-        .html( "new text for the first h3!" );
+// Set screen name on the tracker to be sent with all hits.
+tracker.set(Fields.SCREEN_NAME, "Home Screen");
+
+// Send a screen view for "Home Screen"
+tracker.send(MapBuilder
+    .createAppView()
+    .build()
+);
+
+// This event will also be sent with &cd=Home%20Screen.
+tracker.send(MapBuilder
+    .createEvent("UX", "touch", "menuButton", null)
+    .build()
+);
+
+// Clear the screen name field when we're done.
+tracker.set(Fields.SCREEN_NAME, null);
 <b>```</b>
 </pre>
-    <p>What does code <a href="http://codepen.io/cloudchen/pen/aczBp">look</a> like?</p>
+    <p>What does code <a href="http://markable.in/file/2499b448-2f72-11e3-93a0-984be164924a/">look</a> like?</p>
     </article>
   </slide>
 
