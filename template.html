@@ -7,9 +7,10 @@ Authors: Eric Bidelman <ebidel@gmail.com>
 URL: https://code.google.com/p/io-2012-slides
 -->
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <title></title>
+  <title>Markdown introduction and basic syntax | CloudChen.com</title>
+  <meta name="description" content="基本的 Markdown 語法與實際範例解說">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
@@ -17,6 +18,7 @@ URL: https://code.google.com/p/io-2012-slides
   <!--This one seems to work all the time, but really small on ipad-->
   <!--<meta name="viewport" content="initial-scale=0.4">-->
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="canonical" href="http://goo.gl/MROg1Q">
   <link rel="stylesheet" media="all" href="theme/css/default.css">
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
@@ -94,7 +96,7 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>標題 Headers</h2>
     </hgroup>
     <article>
-      <p>Markdown 支援兩種標題的語法，<a href="http://en.wikipedia.org/wiki/Setext">Setext</a> 和 <a href="http://www.aaronsw.com/2002/atx/intro">atx</a> 形式</p> 
+      <p>Markdown 支援兩種標題的語法，<a href="http://en.wikipedia.org/wiki/Setext">Setext</a> 和 <a href="http://www.aaronsw.com/2002/atx/intro">atx</a> 形式</p>
       <pre data-lang="markdown">
 // Setext-style
 This is a h1 element
@@ -118,7 +120,7 @@ This is a h2 element
       <h2>段落 Paragraphs</h2>
     </hgroup>
     <article>
-      <p>Markdown 的段落就如同我們一般寫作分段一樣，段落與端落之間空一行即可</p> 
+      <p>Markdown 的段落就如同我們一般寫作分段一樣，段落與端落之間空一行即可</p>
       <pre data-lang="markdown">
 A Second Level Header
 ---------------------
@@ -140,7 +142,7 @@ dog's back.
       <h2>引言 Quotes</h2>
     </hgroup>
     <article>
-      <p>Markdown 支援巢狀 (nested) 的引言使用</p> 
+      <p>Markdown 支援巢狀 (nested) 的引言使用</p>
       <pre class="prettyprint" data-lang="markdown">
 <b>></b> Life is an open book exam. - Tina Seelig
 
@@ -188,7 +190,7 @@ dog's back.
       <h2>強調 Emphasise</h2>
     </hgroup>
     <article>
-      <p>使用星號 (<code>*</code>) 與底線 (<code>_</code>)</p> 
+      <p>使用星號 (<code>*</code>) 與底線 (<code>_</code>)</p>
       <pre class="prettyprint" data-lang="markdown">
 Jimmy: 所以中午要吃什麼？
 William: <b>_愛煩司_</b>  //標準不選字類型！
@@ -205,7 +207,7 @@ William: <b>__KIKI__</b>說他想吃<b>**波士頓派**</b>
       <h2>分隔線 Horizontal Rules</h2>
     </hgroup>
     <article>
-      <p>使用<code>三個以上</code>的星號 (<code>*</code>) 與減號 (<code>-</code>)</p> 
+      <p>使用<code>三個以上</code>的星號 (<code>*</code>) 與減號 (<code>-</code>)</p>
       <pre data-lang="markdown">
 * * *
 
@@ -256,7 +258,7 @@ tracker.set(Fields.SCREEN_NAME, null);
       <h2>程式碼 Inline Code</h2>
     </hgroup>
     <article>
-      <p>使用反引號 (<code>`</code>) 包起來</p> 
+      <p>使用反引號 (<code>`</code>) 包起來</p>
       <pre class="prettyprint" data-lang="markdown">
 - <b>`</b>cmd<b>`</b> + <b>`</b>T<b>`</b>: 開啟新分頁
 - <b>`</b>cmd<b>`</b> + <b>`</b>W<b>`</b>: 關閉當前分頁
@@ -274,7 +276,7 @@ tracker.set(Fields.SCREEN_NAME, null);
       <h2>連結 Links</h2>
     </hgroup>
     <article>
-      <p>Markdown 支援兩種連結語法：<code>行內</code> 和 <code>參考</code></p> 
+      <p>Markdown 支援兩種連結語法：<code>行內</code> 和 <code>參考</code></p>
       <pre data-lang="markdown">
 這是一個行內形式連結的語法[範例](http://cloudchen.com/)
 Markdown 對於[站內連結](/images/barchart.png)也有一套！
@@ -305,7 +307,7 @@ Markdown 對於[站內連結](/images/barchart.png)也有一套！
       <h2>圖片 Images</h2>
     </hgroup>
     <article>
-    <p>圖片的語法也有：<code>行內</code> 和 <code>參考</code> 兩種，類似連結的語法，不過在前面多加了<code>驚嘆號(!)</code></p>  
+    <p>圖片的語法也有：<code>行內</code> 和 <code>參考</code> 兩種，類似連結的語法，不過在前面多加了<code>驚嘆號(!)</code></p>
       <pre data-lang="markdown">
 Jimmy：最近我會收到一個包裹
 
@@ -375,7 +377,7 @@ Jimmy：最近我會收到一個包裹
 
 <script>
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_setAccount', 'UA-3263672-7']);
 _gaq.push(['_trackPageview']);
 
 (function() {
