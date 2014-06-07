@@ -1,84 +1,66 @@
 
-avatar-io-2012-slide
-====================
+Markdown Slide for Starktech Co Ltd
+===================================
 
-a template of HTML5 slide modified from io-2012-slide provided by Google.
+## 投影片設置
 
-## Configuring the slides
+大多數能夠自訂的設置選項都在 [`slide_config.js`](slide_config.js) 這個檔案中
+這些設置選項包含了：
+- 投影片標題
+- Google Analytics 的 Traking ID
+- 演說者資訊(姓名、社群檔案、部落格)
+- 使用的 Web Fonts
+- 佈景主題
 
-Much of the deck is customized by changing the settings in [`slide_config.js`](slide_config.js).
-Some of the customizations include the title, Analytics tracking ID, speaker
-information (name, social urls, blog), web fonts to load, themes, and other
-general behavior.
+## 編輯 CSS
 
-### Customizing the `#io12` hash
+推薦使用 [Compass](http://compass-style.org/)，不但安裝簡單且非常容易使用與上手
 
-The bottom of the slides include `#io12` by default. If you'd like to change
-this, please update the variable `$social-tags: '#io12';` in
-[`/theme/scss/default.scss`](theme/scss/default.scss).
+### 安裝 Compass 並且開始修改
 
-See the next section on "Editing CSS" before you go editing things.
-
-## Editing CSS
-
-[Compass](http://compass-style.org/install/) is a CSS preprocessor used to compile
-SCSS/SASS into CSS. We chose SCSS for the new slide deck for maintainability,
-easier browser compatibility, and because...it's the future!
-
-That said, if not comfortable working with SCSS or don't want to learn something
-new, not a problem. The generated .css files can already be found in
-(see [`/theme/css`](theme/css)). You can just edit those and bypass SCSS altogether.
-However, our recommendation is to use Compass. It's super easy to install and use.
-
-### Installing Compass and making changes
-
-First, install compass:
+首先安裝 compass:
 
     sudo gem update --system
     sudo gem install compass
 
-Next, you'll want to watch for changes to the exiting .scss files in [`/theme/scss`](theme/scss)
-and any new one you add:
+接著，您可以透過下列指令監看您對 [`/theme/scss`](theme/scss) 資料夾中的任何檔案所進行的修改或是新增任何檔案所帶來的效果：
 
-    $ cd io-2012-slides
+    $ cd markdown-slide
     $ compass watch
 
-This command automatically recompiles the .scss file when you make a change.
-Its corresponding .css file is output to [`/theme/css`](theme/css). Slick.
+這個指令將會在您修改檔案時，自動重新編譯 .scss 檔案，而其相對應的 .css 檔案，也將自動地被輸出到 [`/theme/css`](theme/css) 資料夾中
 
-By default, [`config.rb`](config.rb) in the main project folder outputs minified
-.css. It's a best practice after all! However, if you want unminified files,
-run watch with the style output flag:
+預設上，在主要專案資料夾中的 [`config.rb`](config.rb) 會輸出精簡化的 .css 檔案，這是撰寫網頁的最佳實務之一！然而，若您不希望或不需要精簡化過後的 .css 檔案，請執行以下指令：
 
     compass watch -s expanded
 
-*Note:* You should not need to edit [`_base.scss`](theme/scss/_base.scss).
+*註：* 您不需要去修改 [`_base.scss`](theme/scss/_base.scss) 這個檔案
 
-## Running the slides
+## 瀏覽投影片
 
-The slides can be run locally from `file://` making development easy :)
+這份投影片可以藉由 `file://` 的 protocol 在本機端執行，使得在撰寫與開發上便利許多 :p
 
-### Running from a web server
+### 在 Web Server 上執行
 
-If at some point you should need a web server, use [`serve.sh`](serve.sh). It will
-launch a simple one and point your default browser to [`http://localhost:8000/template.html`](http://localhost:8000/template.html):
+在某些特殊的場合或狀況下，你可能會需要一台 Web Server，這時可以執行 [`serve.sh`](serve.sh) 這支 shell script。 它會替你建立一個在本機端運行的 Web Server，並且開啟您預設的瀏覽器，並導向 [`http://localhost:8000/template.html`](http://localhost:8000/template.html):
 
-    $ cd io-2012-slides
+    $ cd markdown-slide
     $ ./serve.sh
 
-You can also specify a custom port:
+您也可以指定特定連接埠（port）:
 
     $ ./serve.sh 8080
 
-### Presenter mode
+### 簡報者模式
 
-The slides contain a presenter mode feature (beta) to view + control the slides
-from a popup window.
+本投影片包含了一個在彈出式視窗下，用來**檢視**＆**控制**投影片的簡報者模式
 
-To enable presenter mode, add `presentme=true` to the URL: [http://localhost:8000/template.html?presentme=true](http://localhost:8000/template.html?presentme=true)
+若要啟用該模式的話，請在 URL 的末端加上 `presentme=true`，如： [http://localhost:8000/template.html?presentme=true](http://localhost:8000/template.html?presentme=true)
 
-To disable presenter mode, hit [http://localhost:8000/template.html?presentme=false](http://localhost:8000/template.html?presentme=false)
+若要停用該模式的話，請修改參數值為 `presentme=false`，如： [http://localhost:8000/template.html?presentme=false](http://localhost:8000/template.html?presentme=false)
 
-Presenter mode is sticky, so refreshing the page will persist your settings.
+簡報者模式一旦設定，就算是重新整理網頁，也會沿用之前設定過的簡報者模式，若要回復初始設定，請設定 `presentme=false`
 
 ---
+
+註：本投影片採用並修改自 Google 在 Google I/O 2012 上所提供的 [HTML 5 投影片模版](https://code.google.com/p/io-2012-slides/)
