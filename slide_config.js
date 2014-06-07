@@ -26,7 +26,7 @@ var SLIDE_CONFIG = {
   presenters: [{
     name: 'Cloud Chen',
     company: 'Android Developer<br>Starktech',
-    gplus: 'http://plus.google.com/117247073365237126711',
+    gplus: 'http://plus.google.com/+CloudChen',
     twitter: '@twCloudChen',
     www: 'http://cloudchen.com',
     github: 'http://github.com/sinergy'
